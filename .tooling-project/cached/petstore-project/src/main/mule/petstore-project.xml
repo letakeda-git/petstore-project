@@ -23,6 +23,6 @@
                 <mcp:text-tool-response-content text="#[payload.^raw]"></mcp:text-tool-response-content>
             </mcp:responses>
         </mcp:tool-listener>
-        <http:request doc:id="gbcttl" doc:name="Request" config-ref="Request-config" path="#[]"></http:request>
+        <http:request doc:id="gbcttl" doc:name="Request" config-ref="Request-config" path="payload.petID"></http:request>
     </flow>
 </mule>
