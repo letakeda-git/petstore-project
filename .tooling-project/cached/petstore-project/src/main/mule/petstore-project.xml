@@ -1,28 +1,11 @@
-<mule xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns:mcp="http://www.mulesoft.org/schema/mule/mcp" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd  http://www.mulesoft.org/schema/mule/mcp http://www.mulesoft.org/schema/mule/mcp/current/mule-mcp.xsd  http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
-  <http:listener-config name="Listener-config">
-    <http:listener-connection host="0.0.0.0" port="8081"></http:listener-connection>
-  </http:listener-config>
-  <mcp:server-config name="Server" serverName="petstore-mcp-server" serverVersion="1.0.0">
-    <mcp:streamable-http-server-connection listenerConfig="Listener-config"></mcp:streamable-http-server-connection>
-  </mcp:server-config>
-  <http:request-config name="Request-config" basePath="/v2/pet/">
-    <http:request-connection protocol="HTTPS" port="443" host="petstore.swagger.io"></http:request-connection>
-  </http:request-config>
+<mule xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:mcp="http://www.mulesoft.org/schema/mule/mcp" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+	http://www.mulesoft.org/schema/mule/mcp http://www.mulesoft.org/schema/mule/mcp/current/mule-mcp.xsd">
   <flow name="name1">
-    <mcp:tool-listener config-ref="Server" doc:name="Tool-listener" name="get-pet-by-id">
-      <mcp:description><![CDATA[Returns a single pet at Swagger Pet Store based on the ID provided by the user]]></mcp:description>
-      <mcp:parameters-schema><![CDATA[{
-                "$schema": "http://json-schema.org/draft-07/schema#",
-                "type": "object",
-                "properties": {
-                    "petID": { "type": "string", "description": "Pet ID" }
-                },
-                "required": ["petId"]
-            }]]></mcp:parameters-schema>
-      <mcp:responses>
-        <mcp:text-tool-response-content text="#[payload.^raw]"></mcp:text-tool-response-content>
-      </mcp:responses>
+    <mcp:tool-listener name="name1">
+      <mcp:description></mcp:description>
+      <mcp:parameters-schema></mcp:parameters-schema>
+      <mcp:responses></mcp:responses>
     </mcp:tool-listener>
-    <http:request doc:id="aipgcn" doc:name="Request" config-ref="Request-config" path="#[payload.petID]"></http:request>
   </flow>
 </mule>
