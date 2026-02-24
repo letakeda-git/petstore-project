@@ -54,3 +54,5 @@ velocity.log
 *.iml
 logs/
 .DS_Store
+
+.tooling-project
