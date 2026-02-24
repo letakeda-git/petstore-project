@@ -1,0 +1,73 @@
+{
+  "basicConstraints": 68,
+  "criticalExtensionOIDs": [
+    "vitae",
+    "venenatis"
+  ],
+  "extendedKeyUsage": [
+    "nunc",
+    "aliquam",
+    "In"
+  ],
+  "extensions": [
+    {
+      "criticality": true,
+      "oid": "mi"
+    }
+  ],
+  "issuerAlternativeNames": [
+    {
+      "name": "Adriana",
+      "type": 28
+    }
+  ],
+  "issuerDN": {
+    "commonName": "nunc",
+    "name": "Carter"
+  },
+  "issuerUniqueID": [
+    false,
+    true
+  ],
+  "issuerX500Principal": {
+    "name": "Akiko"
+  },
+  "keyUsage": [
+    true,
+    false,
+    true
+  ],
+  "name": "Chase",
+  "nonCriticalExtensionOIDs": [
+    "erat",
+    "Pellentesque",
+    "felis"
+  ],
+  "publicKey": {
+    "algorithm": "a",
+    "modulus": 53,
+    "params": 59,
+    "publicKey": "Aliquam"
+  },
+  "serialNumber": 45,
+  "serialNumberObject": {
+    "serialNumber": 63
+  },
+  "sigAlgName": "nibh",
+  "sigAlgOID": "pulvinar",
+  "subjectAlternativeNames": [
+    {
+      "name": "Amalia",
+      "type": 51
+    }
+  ],
+  "subjectDN": {
+    "commonName": "molestie",
+    "name": "Adena"
+  },
+  "subjectX500Principal": {
+    "name": "Coleman"
+  },
+  "type": "venenatis",
+  "version": 95
+}
